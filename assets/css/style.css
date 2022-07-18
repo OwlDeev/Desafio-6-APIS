@@ -1,0 +1,134 @@
+body {
+  font-family: "Concert One", cursive;
+
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.users {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.user {
+  background: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  height: 20%;
+  width: 100%;
+  background-color: #ffd000;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 5px 5px rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#iconTitle{
+    margin-left: 20px;
+    font-size: 50px;
+    color:  rgb(255, 255, 255);
+    text-shadow: 2px 5px 5px rgb(0, 0, 0);
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.fullHeightWidth{
+    width: 100%;
+    height: 100%;
+}
+
+.centerContent{
+    justify-content: center;
+    align-items: center;
+}
+
+.justifyCenter{
+    text-align: center;
+}
+
+#divGeneralConverter{
+    height: 80%;
+    width: 80%;
+    background-color:  rgba(0, 0, 0, 0.637);
+    border-radius: 20%;
+    box-shadow: 5px 5px 5px#ff8800;
+    padding: 10%;
+}
+
+.titleDivLeft{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.titleHeader{
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.marginS{
+    margin:10px;
+}
+
+.marginM{
+    padding:20px;
+}
+
+.marginL{
+    margin:30px;
+}
+
+.widthInput{
+    width: 100%;
+}
+
+.textAlignLeft{
+    align-items: start;
+}
+
+.selectedItem{
+    text-align: center;
+}
+
+#imgMoney{
+    height: 20px;
+    width: 25px;
+}
+
+#moneyChange{
+    height: 30px;
+    width: 100%;
+}
+ 
+#buttonTransform{
+    margin: 20px;
+}
+
+#divLeft{
+
+}
+
+#divRight{
+
+}
