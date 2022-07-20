@@ -37,7 +37,7 @@
           <div class="flexRow fullHeightWidth">
             <div class="flexColumn fullHeightWidth centerContent textAlignLeft">
               <div class="d-flex align-items-center fullHeightWidth">
-                <h2 class="titleDivLeft">Pesos chilenos CLP : </h2>
+                <h2 class="titleDivLeft">Chilean Pesos CLP : </h2>
               </div>
               <div class="d-flex align-items-center fullHeightWidth">
                 <h2 class="titleDivLeft">Money change : </h2>
@@ -46,20 +46,18 @@
             <div class="flexColumn fullHeightWidth centerContent">
               <div class="flexRow fullHeightWidth centerContent">
                 <img
-                id="imgMoney"
+                class="imgMoney"
                 alt="Chile"
                 src="https://catamphetamine.gitlab.io/country-flag-icons/3x2/CL.svg"/>
                 <input
-                type="number"
-                min="1"
-                step="any"
                 id="inputMoney"
                 class="marginS widthInput"
               />
               </div>
               <div class="flexRow fullHeightWidth centerContent">
                 <img
-                id="imgMoney"
+                class="imgMoney"
+                id="imgMoneyChange"
                 alt="United States"
                 src="http://purecatamphetamine.github.io/country-flag-icons/1x1/US.svg"/>
                 <select
@@ -70,16 +68,16 @@
               </div>
             </div>
           </div>
-          <button id="buttonTransform">Transform</button>
+          <button type="button" class="btn btn-info" id="buttonChange"><h2>Convert</h2></button>
           <h2 class="titleDivLeft">Result : <h2 class="titleDivLeft" id="result"></h2></h2>
         </div>
 
         <!-- <section class="converterMoneys"></section> -->
       </div>
       <div id="divRight" class="flexColumn fullHeightWidth centerContent">
-        <h1>Últimos Sismos en Chile</h1>
-        <div class="grafica">
-          <canvas id="myChart"></canvas>
+        <h1>Últimos valores del <h1 id="typeMoneyH1"></h1></h1>
+        <div class="d-flex grafica fullHeightWidth centerContent">
+          <canvas id="myChart" class="fullHeightWidth"></canvas>
         </div>
       </div>
     </main>
@@ -90,5 +88,6 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
