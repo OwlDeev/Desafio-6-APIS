@@ -11,6 +11,7 @@ var priceEuro = 0;
 const fechaActual = fechaActualFunction();
 var moneyChangeIndex = 0;
 var typeMoneyH1 = document.getElementById("typeMoneyH1");
+var existCanva = false;
 
 //FUNCIONES EXTRAS para la fecha actual
 function fechaActualFunction() {
@@ -94,13 +95,14 @@ moneyChange.addEventListener("change", function () {
   }
 });
 
-function precioMoney(priceMoney){
-  var price = valueInputClp / priceMoney; 
+function precioMoney(priceMoney) {
+  var price = valueInputClp / priceMoney;
   return price;
 }
 
 //button and label result
 buttonChange.addEventListener("click", function () {
+  refreshCanva();
   if (validator() == true) {
     switch (converterMoneys.selectedIndex) {
       case 0:
@@ -166,27 +168,39 @@ async function getAndCreateDataToChart() {
   }
   typeMoneyH1.innerHTML = typeMoney;
 
-    const datasets = {
-      labels: datePrice,
-      datasets: [{
+  const datasets = {
+    labels: datePrice,
+    datasets: [
+      {
         label: typeMoney,
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
+        backgroundColor: "rgb(255, 99, 132)",
+        borderColor: "rgb(255, 99, 132)",
         data: data,
-      }]
-    };
+      },
+    ],
+  };
 
-    return datasets;
+  return datasets;
 }
 
 async function renderGrafica() {
   const data = await getAndCreateDataToChart();
   const config = {
-    type: 'line',
+    type: "line",
     data: data,
   };
   const myChart = document.getElementById("myChart");
-  myChart.innerHTML = '';
+  myChart.innerHTML = "";
   myChart.style.backgroundColor = "white";
-  new Chart(myChart, config);
+  window.myChart = new Chart(myChart, config);
+  existCanva = true;
+}
+
+function refreshCanva() {
+  var myChart = document.getElementById("myChart");
+  if (existCanva === true) {
+    window.myChart.clear();
+    window.myChart.destroy();
   }
+  existCanva = false;
+}
